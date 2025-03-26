@@ -3,6 +3,7 @@ import { API } from "../Utils/Constants";
 import Carousel from "./Carousel";
 import NavBar from "./NavBar";
 import TopRestaurants from "./TopRestaurants";
+import ResInCity from "./ResInCity";
 
 const AllRestaurant = () => {
   const [apiData, setApiData] = useState();
@@ -38,14 +39,14 @@ const AllRestaurant = () => {
             }
           />
           <hr className="w-[80vw] mx-auto mt-5 mb-10" />
-          {/* <ResInCity
+          <ResInCity
             data={
               apiData
                 ? apiData.data.cards[4].card.card.gridElements.infoWithStyle
                     .restaurants
                 : []
             }
-          /> */}
+          />
         </>
       }
     </div>

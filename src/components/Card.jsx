@@ -15,7 +15,7 @@ const Card = ({ name, img, time, area, rating, cuisines, c, id }) => {
 
   str2 = str2.length > 20 ? str2.slice(0, 20) + "..." : str2;
   return (
-    <>
+    <Link to={`/menu/${id}`}>
       <div
         className={
           " flex flex-col items-center " +
@@ -73,7 +73,7 @@ const Card = ({ name, img, time, area, rating, cuisines, c, id }) => {
           <p className="text-gray-400">{area}</p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
