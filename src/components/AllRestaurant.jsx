@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import NavBar from "./NavBar";
 import TopRestaurants from "./TopRestaurants";
 import ResInCity from "./ResInCity";
+import ShimmerUI from "./ShimmerUI";
 
 const AllRestaurant = () => {
   const [apiData, setApiData] = useState();
@@ -22,7 +23,7 @@ const AllRestaurant = () => {
     <div>
       <NavBar />
 
-      {
+      {apiData ? (
         <>
           <Carousel
             data={
@@ -48,7 +49,9 @@ const AllRestaurant = () => {
             }
           />
         </>
-      }
+      ) : (
+        <ShimmerUI />
+      )}
     </div>
   );
 };
